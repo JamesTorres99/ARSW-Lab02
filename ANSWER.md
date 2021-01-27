@@ -15,4 +15,4 @@ Creación, puesta en marcha y coordinación de hilos.
 
 EL programa utiliza un maximo de 2 nucleos para la ejecucion. 
 
-![Ejecución del programa](./img/media/lab/1.PNG) 
+![Ejecución del programa](./img/media/lab/image2.png) 
