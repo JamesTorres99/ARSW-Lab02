@@ -2,6 +2,7 @@ package edu.eci.arsw.primefinder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -11,7 +12,7 @@ public class Main {
 //		
 //		pft.start();
 		
-		int nThreads = 1;
+		int nThreads = 3;
 		if (nThreads <= 0 || nThreads > 30000001) nThreads = 1;
 		
 		int seccion = 30000001/nThreads;
@@ -23,15 +24,18 @@ public class Main {
 			threads.get(i).start();
 		}
 		
-		for (PrimeFinderThread t: threads) {
-			try {
-				t.join();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			
 		}
 		
+		for (PrimeFinderThread t: threads) {
+			t.stop();
+		}
+		
+		
+		new Scanner(System.in).nextLine();
 		
 	}
 	
