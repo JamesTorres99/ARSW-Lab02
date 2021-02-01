@@ -12,7 +12,7 @@ public class Main {
 //		
 //		pft.start();
 		
-		int nThreads = 3;
+		int nThreads = 10;
 		if (nThreads <= 0 || nThreads > 30000001) nThreads = 1;
 		
 		int seccion = 30000001/nThreads;

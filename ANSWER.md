@@ -31,3 +31,25 @@ EL programa utiliza un maximo de 2 nucleos para la ejecucion.
 
 
 ## *PARTE II*
+
+En esta parte, se puede observar la ejecución de un sistema multihilo que depende únicamente del *scheduler* del procesador.
+El sistema presenta fallas de sincronización, haciendo que el hilo "principal" termine antes que los demás. 
+
+![Se termina antes por fallas de sincronización](./img/media/lab/5.PNG)
+
+## *PARTE III*
+
+1. Se corrigió el hilo principal utlizando un `join()` por cada hilo (galgo) que se creara. Esto hizo que el hilo principal tuviera que esperar a que los demás terminaran.
+2. Se presentan errores cuando e maneja la memoria compartida accesible desde la clase `RegistroLlegada`. Como no hay sincronización, cada hilo puede obtener y escribir datos erróneos.
+
+![Mala sincronización de hilos](./img/media/lab/6.PNG)
+
+* Las zonas críticas del programa están en la clase `RegistroLlegada`, ya que es en está clase donde esta la memoria compartida de los hilos, y en el código de cada hilo en la clase `Galgo`.
+
+3. Para solucionar este problema y debido a como está diseñado la estructura del programa, se utilizó un bloque de código sincronizado para aislar la zona crítica.
+
+![Cambiando el código](./img/media/lab/7.PNG)
+
+![Prueba de aceptación](./img/media/lab/8.PNG)
+
+4. 
