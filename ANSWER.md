@@ -55,10 +55,13 @@ El sistema presenta fallas de sincronización, haciendo que el hilo "principal" 
 4.Integramos los metodos parar y renaudar.
 
 Se modifico listeners de las acciones de parar y renaudar.
+
 ![Prueba de aceptación](./img/media/lab/9.PNG)
 
 creamos los metodos parar() y renaudar().
+
 ![Prueba de aceptación](./img/media/lab/10.PNG)
 
 Por ultimo implementamos wait().
+
 ![Prueba de aceptación](./img/media/lab/11.PNG)
