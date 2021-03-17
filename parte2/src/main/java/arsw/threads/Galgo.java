@@ -22,7 +22,7 @@ public class Galgo extends Thread {
 	public void corra() throws InterruptedException {
 		while (paso < carril.size()) {			
 			synchronized (this) {
-				while (pausar)wait();				
+				while (pausar) wait();				
 				}
 			Thread.sleep(100);
 			carril.setPasoOn(paso++);
